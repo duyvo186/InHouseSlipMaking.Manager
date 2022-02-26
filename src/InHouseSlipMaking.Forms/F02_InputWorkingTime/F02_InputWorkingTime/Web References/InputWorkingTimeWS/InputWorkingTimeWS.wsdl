@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSharepointListKyuzuForInitial">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSharepointListKyuzuForInitialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSharepointListKyuzuForInitialResult" type="tns:ArrayOfSharePointKyuzuList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSharePointKyuzuList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SharePointKyuzuList" nillable="true" type="tns:SharePointKyuzuList" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SharePointKyuzuList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiveingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersionInChangeOfSales" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeOfCar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeOfModel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonInCharge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Categoty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeliveryDatePlan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonInChargeOfHouan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonInChargeOfCAD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManHour" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeliveryDateActial" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumberOfKata" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kyuzu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelFlag" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReceiveingInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReceiveingInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReceiveingInformationResult" type="tns:ReceiveingInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReceiveingInformation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDomainOfReceiveingInformation">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RECEIVEING_NUM" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DATA_NUM" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SIZE_W" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SIZE_D" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SIZE_H" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="WEIGHT" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="COMPLETED_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CAD_START_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="MANUFACTURE_START_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="HOUAN_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="KIBORI_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CAD_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CAM_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="SHIYOUZU_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="NC_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="WIRECUT_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="SHIAGE_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="KENSAHYOU_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="KENSA_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="COMPLETED_CK_DT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CANCEL_FLAG" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UPDATE_FLAG" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UPD_WOKER_CD" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UPD_DT" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDomainOfReceiveingInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Check" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListWorkingTimeRecodeForForm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListWorkingTimeRecodeForFormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListWorkingTimeRecodeForFormResult" type="tns:ArrayOfWorkingTimeRecode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWorkingTimeRecode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WorkingTimeRecode" nillable="true" type="tns:WorkingTimeRecode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WorkingTimeRecode">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDomainOfWorkingTimeRecode">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RECEIVEING_NUM" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="WORK_ITEM" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="WOKER_CD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="WOKER_NM" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="WORK_DATE" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="WORKING_HOURS" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="UPD_DT" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDomainOfWorkingTimeRecode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Check" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSharepointItemWorkMaster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSharepointItemWorkMasterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSharepointItemWorkMasterResult" type="tns:SharePointWorkMasterList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SharePointWorkMasterList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="WorkerCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdministrationItem" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllSharePointWorkMasterList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllSharePointWorkMasterListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllSharePointWorkMasterListResult" type="tns:ArrayOfSharePointWorkMasterList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSharePointWorkMasterList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SharePointWorkMasterList" nillable="true" type="tns:SharePointWorkMasterList" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCurrentUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrentUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReceiveingInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:ReceiveingInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReceiveingInformationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="testUpdate">
+        <s:complexType />
+      </s:element>
+      <s:element name="testUpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateWorkingTimeRecode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListItem" type="tns:ArrayOfWorkingTimeRecode" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListItemBackUp" type="tns:ArrayOfWorkingTimeRecode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateWorkingTimeRecodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateOrInsertWorkingTimeRecode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:WorkingTimeRecode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrInsertWorkingTimeRecodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteWorkingTimeRecode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:WorkingTimeRecode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteWorkingTimeRecodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckRecieveExistInSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recieve" type="tns:ReceiveingInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckRecieveExistInSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckRecieveExistInSPResult" type="tns:SharePointKyuzuList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSharepointListKyuzuForInitialSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSharepointListKyuzuForInitial" />
+  </wsdl:message>
+  <wsdl:message name="GetSharepointListKyuzuForInitialSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSharepointListKyuzuForInitialResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReceiveingInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReceiveingInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetReceiveingInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReceiveingInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListWorkingTimeRecodeForFormSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListWorkingTimeRecodeForForm" />
+  </wsdl:message>
+  <wsdl:message name="GetListWorkingTimeRecodeForFormSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListWorkingTimeRecodeForFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSharepointItemWorkMasterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSharepointItemWorkMaster" />
+  </wsdl:message>
+  <wsdl:message name="GetSharepointItemWorkMasterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSharepointItemWorkMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllSharePointWorkMasterListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllSharePointWorkMasterList" />
+  </wsdl:message>
+  <wsdl:message name="GetAllSharePointWorkMasterListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllSharePointWorkMasterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiveingInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateReceiveingInformation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiveingInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateReceiveingInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="testUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:testUpdate" />
+  </wsdl:message>
+  <wsdl:message name="testUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:testUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWorkingTimeRecodeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateWorkingTimeRecode" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWorkingTimeRecodeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateWorkingTimeRecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrInsertWorkingTimeRecodeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrInsertWorkingTimeRecode" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrInsertWorkingTimeRecodeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrInsertWorkingTimeRecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWorkingTimeRecodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteWorkingTimeRecode" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWorkingTimeRecodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteWorkingTimeRecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckRecieveExistInSPSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckRecieveExistInSP" />
+  </wsdl:message>
+  <wsdl:message name="CheckRecieveExistInSPSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckRecieveExistInSPResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InputWorkingTimeWSSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharepointListKyuzuForInitial">
+      <wsdl:input message="tns:GetSharepointListKyuzuForInitialSoapIn" />
+      <wsdl:output message="tns:GetSharepointListKyuzuForInitialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiveingInformation">
+      <wsdl:input message="tns:GetReceiveingInformationSoapIn" />
+      <wsdl:output message="tns:GetReceiveingInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListWorkingTimeRecodeForForm">
+      <wsdl:input message="tns:GetListWorkingTimeRecodeForFormSoapIn" />
+      <wsdl:output message="tns:GetListWorkingTimeRecodeForFormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharepointItemWorkMaster">
+      <wsdl:input message="tns:GetSharepointItemWorkMasterSoapIn" />
+      <wsdl:output message="tns:GetSharepointItemWorkMasterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSharePointWorkMasterList">
+      <wsdl:input message="tns:GetAllSharePointWorkMasterListSoapIn" />
+      <wsdl:output message="tns:GetAllSharePointWorkMasterListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUser">
+      <wsdl:input message="tns:GetCurrentUserSoapIn" />
+      <wsdl:output message="tns:GetCurrentUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiveingInformation">
+      <wsdl:input message="tns:UpdateReceiveingInformationSoapIn" />
+      <wsdl:output message="tns:UpdateReceiveingInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="testUpdate">
+      <wsdl:input message="tns:testUpdateSoapIn" />
+      <wsdl:output message="tns:testUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkingTimeRecode">
+      <wsdl:input message="tns:UpdateWorkingTimeRecodeSoapIn" />
+      <wsdl:output message="tns:UpdateWorkingTimeRecodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrInsertWorkingTimeRecode">
+      <wsdl:input message="tns:UpdateOrInsertWorkingTimeRecodeSoapIn" />
+      <wsdl:output message="tns:UpdateOrInsertWorkingTimeRecodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkingTimeRecode">
+      <wsdl:input message="tns:DeleteWorkingTimeRecodeSoapIn" />
+      <wsdl:output message="tns:DeleteWorkingTimeRecodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRecieveExistInSP">
+      <wsdl:input message="tns:CheckRecieveExistInSPSoapIn" />
+      <wsdl:output message="tns:CheckRecieveExistInSPSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InputWorkingTimeWSSoap" type="tns:InputWorkingTimeWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSharepointListKyuzuForInitial">
+      <soap:operation soapAction="http://tempuri.org/GetSharepointListKyuzuForInitial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiveingInformation">
+      <soap:operation soapAction="http://tempuri.org/GetReceiveingInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListWorkingTimeRecodeForForm">
+      <soap:operation soapAction="http://tempuri.org/GetListWorkingTimeRecodeForForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSharepointItemWorkMaster">
+      <soap:operation soapAction="http://tempuri.org/GetSharepointItemWorkMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSharePointWorkMasterList">
+      <soap:operation soapAction="http://tempuri.org/GetAllSharePointWorkMasterList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUser">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiveingInformation">
+      <soap:operation soapAction="http://tempuri.org/UpdateReceiveingInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testUpdate">
+      <soap:operation soapAction="http://tempuri.org/testUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkingTimeRecode">
+      <soap:operation soapAction="http://tempuri.org/UpdateWorkingTimeRecode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrInsertWorkingTimeRecode">
+      <soap:operation soapAction="http://tempuri.org/UpdateOrInsertWorkingTimeRecode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkingTimeRecode">
+      <soap:operation soapAction="http://tempuri.org/DeleteWorkingTimeRecode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRecieveExistInSP">
+      <soap:operation soapAction="http://tempuri.org/CheckRecieveExistInSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InputWorkingTimeWSSoap12" type="tns:InputWorkingTimeWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSharepointListKyuzuForInitial">
+      <soap12:operation soapAction="http://tempuri.org/GetSharepointListKyuzuForInitial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiveingInformation">
+      <soap12:operation soapAction="http://tempuri.org/GetReceiveingInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListWorkingTimeRecodeForForm">
+      <soap12:operation soapAction="http://tempuri.org/GetListWorkingTimeRecodeForForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSharepointItemWorkMaster">
+      <soap12:operation soapAction="http://tempuri.org/GetSharepointItemWorkMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSharePointWorkMasterList">
+      <soap12:operation soapAction="http://tempuri.org/GetAllSharePointWorkMasterList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUser">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiveingInformation">
+      <soap12:operation soapAction="http://tempuri.org/UpdateReceiveingInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testUpdate">
+      <soap12:operation soapAction="http://tempuri.org/testUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkingTimeRecode">
+      <soap12:operation soapAction="http://tempuri.org/UpdateWorkingTimeRecode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrInsertWorkingTimeRecode">
+      <soap12:operation soapAction="http://tempuri.org/UpdateOrInsertWorkingTimeRecode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkingTimeRecode">
+      <soap12:operation soapAction="http://tempuri.org/DeleteWorkingTimeRecode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRecieveExistInSP">
+      <soap12:operation soapAction="http://tempuri.org/CheckRecieveExistInSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InputWorkingTimeWS">
+    <wsdl:port name="InputWorkingTimeWSSoap" binding="tns:InputWorkingTimeWSSoap">
+      <soap:address location="http://localhost:51046/InHouseSlipMaking.Web/Webservices/InputWorkingTimeWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InputWorkingTimeWSSoap12" binding="tns:InputWorkingTimeWSSoap12">
+      <soap12:address location="http://localhost:51046/InHouseSlipMaking.Web/Webservices/InputWorkingTimeWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

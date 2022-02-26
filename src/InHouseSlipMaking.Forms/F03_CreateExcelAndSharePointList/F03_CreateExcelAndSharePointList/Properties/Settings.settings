@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="F03_CreateExcelAndSharePointList.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="F03_CreateExcelAndSharePointList_CreateExcelAndUpdateSharePointListWS_CreateExcelAndUpdateSharePointListWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:51046/InHouseSlipMaking.Web/Webservices/CreateExcelAndUpdateSharePointListWS.asmx</Value>
+    </Setting>
+    <Setting Name="PATH_SETTING_FILE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Setting.ini</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

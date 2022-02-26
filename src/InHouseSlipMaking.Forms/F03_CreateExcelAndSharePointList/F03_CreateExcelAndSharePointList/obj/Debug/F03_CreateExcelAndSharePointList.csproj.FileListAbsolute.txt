@@ -1,0 +1,1 @@
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Forms\F03_CreateExcelAndSharePointList\F03_CreateExcelAndSharePointList\obj\Debug\F03_CreateExcelAndSharePointList.csprojAssemblyReference.cache

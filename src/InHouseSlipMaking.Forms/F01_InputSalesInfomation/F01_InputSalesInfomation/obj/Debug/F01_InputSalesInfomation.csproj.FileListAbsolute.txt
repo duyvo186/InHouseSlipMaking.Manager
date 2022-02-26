@@ -1,0 +1,4 @@
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Forms\F01_InputSalesInfomation\F01_InputSalesInfomation\obj\Debug\F01_InputSalesInfomation.csprojAssemblyReference.cache
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Forms\F01_InputSalesInfomation\F01_InputSalesInfomation\obj\Debug\F01_InputSalesInfomation.F01_InputSaleInfomation.resources
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Forms\F01_InputSalesInfomation\F01_InputSalesInfomation\obj\Debug\F01_InputSalesInfomation.FormProgessBar.resources
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Forms\F01_InputSalesInfomation\F01_InputSalesInfomation\obj\Debug\F01_InputSalesInfomation.csproj.GenerateResource.cache

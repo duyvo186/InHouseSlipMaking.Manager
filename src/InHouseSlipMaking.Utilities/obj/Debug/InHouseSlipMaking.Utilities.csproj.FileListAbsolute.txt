@@ -1,0 +1,4 @@
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Utilities\obj\Debug\InHouseSlipMaking.Utilities.csprojAssemblyReference.cache
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Utilities\obj\Debug\InHouseSlipMaking.ResourceUtil.resources
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Utilities\obj\Debug\InHouseSlipMaking.ResourceUtil.en.resources
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\InHouseSlipMaking.Utilities\obj\Debug\InHouseSlipMaking.Utilities.csproj.GenerateResource.cache

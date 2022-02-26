@@ -1,0 +1,4 @@
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\Backup\InHouseSlipMaking.Forms\F02_InputWorkingTime\F02_InputWorkingTime\obj\Debug\F02_InputWorkingTime.csprojAssemblyReference.cache
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\Backup\InHouseSlipMaking.Forms\F02_InputWorkingTime\F02_InputWorkingTime\obj\Debug\F02_InputWorkingTime.WorkingTimeInputForm.resources
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\Backup\InHouseSlipMaking.Forms\F02_InputWorkingTime\F02_InputWorkingTime\obj\Debug\F02_InputWorkingTime.Properties.Resources.resources
+C:\Users\ACER\source\repos\InHourseSlipMaking\src\Backup\InHouseSlipMaking.Forms\F02_InputWorkingTime\F02_InputWorkingTime\obj\Debug\F02_InputWorkingTime.csproj.GenerateResource.cache
