@@ -1,0 +1,1 @@
+# InHouseSlipMaking.Manager
